@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
-import java.util.stream.Collector;
 
 /**
  * Created by jianbojia on 11/30/16.
@@ -54,33 +51,24 @@ public class WordsSortingSolution {
     }
 
     public static void bubbleSort(char[] arr) {
-        int compareTimes = 0;
-        int exchangeTimes = 0;
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length - 1 - i; j++) {
-                compareTimes++;
                 if (arr[j] > arr[j + 1]) {
                     char temp = arr[j + 1];
                     arr[j + 1] = arr[j];
                     arr[j] = temp;
-                    exchangeTimes++;
                 }
             }
         }
 
-        System.out.println("\nBubble sort uses " + compareTimes + " compare times");
-        System.out.println("And uses " + exchangeTimes + " exchange times\n");
     }
 
     public static void selectSort(char[] arr) {
-        int compareTimes = 0;
-        int exchangeTimes = 0;
 
         for (int i = 0; i < arr.length - 1; i++) {
             int min = i;
             int j = i + 1;
             for (; j < arr.length; j++) {
-                compareTimes++;
                 if (arr[j] < arr[min]) {
                     min = j;
                 }
@@ -88,36 +76,26 @@ public class WordsSortingSolution {
             char temp = arr[i];
             arr[i] = arr[min];
             arr[min] = temp;
-            exchangeTimes++;
 
         }
-        System.out.println("\nSelect sort uses " + compareTimes + " compare times");
-        System.out.println("And uses " + exchangeTimes + " exchange times\n");
 
     }
 
     public static void insertSort(char[] arr)  {
-        int compareTimes = 0;
-        int exchangeTimes = 0;
 
         for (int i = 1; i < arr.length; i++) {
             int j = i;
             char temp = arr[j];
 
             while (j > 0 && temp < arr[j - 1]) {
-                compareTimes++;
                 arr[j] = arr[j - 1];
-                exchangeTimes++;
                 j--;
             }
 
             arr[j] = temp;
-            exchangeTimes++;
 
         }
 
-        System.out.println("\nInsert sort uses " + compareTimes + " compare times");
-        System.out.println("And uses " + exchangeTimes + " exchange times\n");
     }
 
 }
