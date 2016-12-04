@@ -5,7 +5,7 @@ package firstreview;
  */
 public class Q7 {
     public static void main(String[] args) {
-        int rst = TwoWay(5,7);
+        int rst = TwoWay(6,8);
         System.out.println(rst);
     }
 

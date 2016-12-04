@@ -12,11 +12,19 @@ public class Q4 {
         }
 
         System.out.println("\nwhile loop result");
-        int j = 20;
-        while (j > 3) {
-            System.out.print(j + " ");
-            j -= 2;
+        int i = 20;
+        while (i > 3) {
+            System.out.print(i + " ");
+            i -= 2;
         }
+
+
+        System.out.println("\ndo while loop result");
+        int k = 20;
+        do{
+            System.out.print(k + " ");
+            k -= 2;
+        }while(k > 3);
 
     }
 }

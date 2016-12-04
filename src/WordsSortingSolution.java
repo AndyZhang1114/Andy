@@ -10,7 +10,7 @@ public class WordsSortingSolution {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter the number of words");
-        int n = 1;//sc.nextInt();
+        int n = sc.nextInt();
 
         String[] words = new String[n];
         String[] rsts = new String[n];
@@ -18,13 +18,12 @@ public class WordsSortingSolution {
         // collect information
         for (int i = 0; i < n; i++) {
             System.out.println("Enter a word");
-            words[i] = "9253106478";//sc.next();
+            words[i] = sc.next();
             rsts[i] = sortAndSubstringLastThreeChars(words[i]);
 
         }
 
         // display the orginal word and results after sorting and substring last three characters
-
         for (int i = 0; i < n ; i++) {
             System.out.println("Original: " + words[i] + ",\t" + "result: " +rsts[i]);
         }

@@ -6,10 +6,48 @@ package firstreview;
 
 class Building {
     private int numFloors; // number of floors in building
+
+    public Building() {
+    }
+
+    public Building(int numFloors) {
+        this.numFloors = numFloors;
+    }
+
+    public int getNumFloors() {
+        return numFloors;
+    }
+
+    public void setNumFloors(int numFloors) {
+        this.numFloors = numFloors;
+    }
+
+    @Override
+    public String toString() {
+        return "Building{" +
+                "numFloors=" + numFloors +
+                '}';
+    }
 }
 
 class Residential extends Building {
-    private int numBedrooms, numBathrooms;
+    public int numBedrooms, numBathrooms;
+
+    public int getNumBedrooms() {
+        return numBedrooms;
+    }
+
+    public void setNumBedrooms(int numBedrooms) {
+        this.numBedrooms = numBedrooms;
+    }
+
+    public int getNumBathrooms() {
+        return numBathrooms;
+    }
+
+    public void setNumBathrooms(int numBathrooms) {
+        this.numBathrooms = numBathrooms;
+    }
 }
 
 class OfficeBlg extends Building {
@@ -37,6 +75,13 @@ class Apartment extends Residential {
 
 public class Q6 {
     public static void main(String[] args) {
+        Building building1 = new Building();
+        Building building2 = new Building(6);
+        System.out.println("building2 = " + building2);
 
+        System.out.println(building2.getNumFloors());
+
+        building2.setNumFloors(8);
+        System.out.println(building2.getNumFloors());
     }
 }
