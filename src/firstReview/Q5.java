@@ -1,4 +1,4 @@
-package firstreview;
+package firstReview;
 
 import java.util.Scanner;
 

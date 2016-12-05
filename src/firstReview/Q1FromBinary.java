@@ -1,4 +1,4 @@
-package firstreview;
+package firstReview;
 
 /**
  * Created by jianbojia on 12/1/16.
